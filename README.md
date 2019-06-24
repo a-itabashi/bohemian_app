@@ -1,24 +1,7 @@
-# README
+# Action Cableを用いたチャットアプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## ER図
+![Untitled Diagram](https://user-images.githubusercontent.com/11900792/60001659-d93c0080-96a1-11e9-80cc-a133f7d60e54.png)
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
