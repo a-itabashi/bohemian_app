@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'homes#index'
-  get 'posts/index'
-  get 'musics/show'
-
+  root to: 'musics#index'
+  
+  resources :musics do
+    resources :posts
+  end
 end
