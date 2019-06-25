@@ -19,7 +19,14 @@ class MusicsController < ApplicationController
   def show
     @title = params[:title]
     @url = params[:url]
+
     @music = Music.find(params[:id])
+    @posts = @music.posts.order(created_at: :desc).page(params[:page]).per(5)
+    @post = @music.posts.build
+    respond_to do |format|
+      format.js{render :show} 
+      format.html
+    end    
   end
 
   def destroy

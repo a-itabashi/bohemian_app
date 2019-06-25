@@ -1,2 +1,26 @@
-<h1>Musics#show</h1>
-<p>Find me in app/views/musics/show.html.erb
+<h1 class="text-center">この動画どう？</h1>
+
+<div class="text-center">
+  <iframe class="embed-responsive-item" id='iframe' width="560" height="315" 
+    src="<%= @url %>"
+    frameborder="0" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+<form>
+  <div class="form-group">
+    <input type="text" class="form-control" id="chat-input" placeholder="何を思う？">
+  </div>
+  <button class="btn btn-primary" id="chat-button">送信</button>
+</form>
+
+<div hidden>
+  <div id="music-id"><%= @music.id %></div>
+</div>
+
+<div id="posts">
+  <%= render @posts %>
+</div>
+
+<%= link_to_next_page @posts, 'つづきを見る', remote: true, id: 'more_link' %>

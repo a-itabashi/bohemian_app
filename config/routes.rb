@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :musics do
     resources :posts
   end
+
+  mount ActionCable.server => '/cable'
 end
