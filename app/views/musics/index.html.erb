@@ -1,9 +1,9 @@
-<h1 class="text-center">どの動画について語る？</h1>
+<h1 class="text-center">どの<span>OMOIDE IN IN MY HEAD</span>について語る？</h1>
 
 <div class="music-index">
   <div class="row">
     <% @musics.each do |music| %>
-      <div class="col-sm-12 col-md-6 music-col">
+      <div class="col-sm-6 col-md-4 music-col">
         <%= link_to music_path(music, title: music.title, url: music.url) do %>
           <div>
             <%= image_tag(music.image) %>
@@ -11,6 +11,7 @@
           <div>
             <%= music.title %>
           </div>
+          <hr>
         <% end %>
       </div>
     <% end %>

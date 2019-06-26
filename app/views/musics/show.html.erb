@@ -12,15 +12,21 @@
   <div class="form-group">
     <input type="text" class="form-control" id="chat-input" placeholder="何を思う？">
   </div>
-  <button class="btn btn-primary" id="chat-button">送信</button>
+  <div class="text-right">
+    <button class="btn btn-primary btn-lg" id="chat-button">送信</button>
+  </div>
 </form>
 
 <div hidden>
   <div id="music-id"><%= @music.id %></div>
 </div>
 
-<div id="posts">
-  <%= render @posts %>
+<div id="posts" class="posts-block">
+  <ul class="list-group">
+    <%= render @posts %>
+  </ul>
 </div>
 
-<%= link_to_next_page @posts, 'つづきを見る', remote: true, id: 'more_link' %>
+<div class="text-center loading-btn">
+  <%= link_to_next_page @posts, 'もっと見る', remote: true, id: 'more_link' %>
+</div>
